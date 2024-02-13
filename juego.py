@@ -9,9 +9,15 @@ texto = ''
 while(True): # Bucle que se rompe hasta que el usuario ingrese un mensaje válido
     texto = input('Ingrese un mensaje\n').lower() # Input para tomar el mensaje
     if re.match(r'^[a-zA-Z\s]+$', texto): # Expresion regular para verificar que solo sean letras u espacios
-        break
+        if len(texto) > 30: # Verificar máximo 30 caracteres
+            print('Por favor ingrese un mensaje de máximo 30 caracteres!')
+        else:
+            break    
     else:
         print('Por favor ingrese un mensaje válido! Solo letras del alfabeto inglés [A-Z]')
+    
+    
+
 mensaje = [np.array(letras.alfabeto_conway[i]) for i in texto] # Generar un array de matrices a partir del mensaje ingresado por el usuario
 matriz_inicial = np.concatenate(mensaje, axis=1) # Concatenar las matrices horizontalmente 
 
