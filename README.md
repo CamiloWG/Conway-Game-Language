@@ -12,3 +12,11 @@ Lenguaje creado a partir de las reglas del juego de la vida de Conway
 
 ># Funcionamiento
 Al ejecutar el programa, se pedirá mediante un input en consola el mensaje que se quiera escribir (los caracteres disponibles son todos los del alfabeto inglés), luego este mensaje será representado gráficamente en un ciclo en el que se aplican las reglas del juego de la vida de conway, de esta forma se podrá evidenciar como se ve antes de la secuencia y luego de aplicarla, este lenguaje solo usa la primer secuencia para generar el mensaje.
+
+
+## Miembros del grupo
+
+- Laura González
+- Camilo Madero
+- Paula Páez
+- Felipe Rodriguez
