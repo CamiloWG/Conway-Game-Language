@@ -73,7 +73,7 @@ def animar_juego(frames):
     # intervalo de tiempo
     # repeticion de la animacion
     # tecnica que solo cambia lo necesario del frame anterior en lugar de redibujar
-    animacion = animation.FuncAnimation(fig, update, frames=frames, interval=1000, repeat=False)
+    animacion = animation.FuncAnimation(fig, update, frames=frames, interval=1500, repeat=True)
     # Llama la ventana de la animacion
     plt.show()
 
