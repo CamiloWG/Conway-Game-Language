@@ -2,11 +2,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import alfabeto as letras;
+import re
 
-# Definir manualmente la matriz inicial (0 para células muertas, 1 para células vivas)
-texto = input('Ingrese un mensaje\n').lower()
-mensaje = [np.array(letras.alfabeto_conway[i]) for i in texto]
-matriz_inicial = np.concatenate(mensaje, axis=1)
+
+texto = ''
+while(True): # Bucle que se rompe hasta que el usuario ingrese un mensaje válido
+    texto = input('Ingrese un mensaje\n').lower() # Input para tomar el mensaje
+    if re.match(r'^[a-zA-Z\s]+$', texto): # Expresion regular para verificar que solo sean letras u espacios
+        break
+    else:
+        print('Por favor ingrese un mensaje válido! Solo letras del alfabeto inglés [A-Z]')
+mensaje = [np.array(letras.alfabeto_conway[i]) for i in texto] # Generar un array de matrices a partir del mensaje ingresado por el usuario
+matriz_inicial = np.concatenate(mensaje, axis=1) # Concatenar las matrices horizontalmente 
 
 
 # Función para aplicar las reglas del Juego de la Vida en un paso
